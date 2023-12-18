@@ -1,0 +1,361 @@
+Order Tracking
+
+// import 'package:flutter/material.dart';
+// import 'package:order_tracker/order_tracker.dart';
+
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key}) : super(key: key);
+
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+
+//   ///this TextDto present in a package add data in this dto and set in a list.
+
+//   List<TextDto> city1 = [
+//     TextDto("Your order has been placed", "Fri, 25th Mar '22 - 10:47pm"),
+//     TextDto("Seller ha processed your order", "Sun, 27th Mar '22 - 10:19am"),
+//     TextDto("Your item has been picked up by courier partner.", "Tue, 29th Mar '22 - 5:00pm"),
+//   ];
+
+//   List<TextDto> city2 = [
+//     TextDto("Your order has been shipped", "Tue, 29th Mar '22 - 5:04pm"),
+//     TextDto("Your item has been received in the nearest hub to you.", null),
+//   ];
+
+//   List<TextDto> city3 = [
+//     TextDto("Your order is out for delivery", "Thu, 31th Mar '22 - 2:27pm"),
+//   ];
+
+//   List<TextDto> city4 = [
+//     TextDto("Your order has been delivered", "Thu, 31th Mar '22 - 3:58pm"),
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text("Warehouse Tracing"),
+//       ),
+//       backgroundColor: Colors.lightBlue,
+//       body: Padding(
+//         padding: const EdgeInsets.all(20),
+//         child: OrderTracker(
+//           status: Status.delivered,
+//           activeColor: Colors.black,
+//           inActiveColor: Colors.yellow[700],
+//           orderTitleAndDateList: city1,
+//           shippedTitleAndDateList: city2,
+//           outOfDeliveryTitleAndDateList: city3,
+//           deliveredTitleAndDateList: city4,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+Profile
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+
+
+// class Profile extends StatefulWidget {
+//   const Profile({super.key});
+
+//   @override
+//   State<Profile> createState() => _ProfileState();
+// }
+
+// class _ProfileState extends State<Profile> {
+//   final formkey = GlobalKey<FormState>(); 
+//    @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+      
+//       appBar: AppBar(
+//         title: const Text("Driver"),
+//         centerTitle: true,
+//         backgroundColor:Color(0xFe9dbff),
+//         leading: const Icon(Icons.arrow_back),
+//         // shape: RoundedRectangleBorder(
+//         //         borderRadius: BorderRadius.only(
+//         //             bottomRight: Radius.circular(180),
+//         //             bottomLeft: Radius.circular(180)))
+//       ),
+//       // backgroundColor: Colors.lightBlue.shade100,
+    
+//       body: SingleChildScrollView(
+        
+//         child: Center(
+//           child:Form(
+//             key: formkey,
+//             child: Column(children: [
+              
+//               Container(
+//                 margin: const EdgeInsets.only(left: 150.0,bottom: 00,right: 150,top: 0),
+//                 padding: const EdgeInsets.all(15.0),
+//                 decoration: BoxDecoration(
+//                   border: Border.all(color: Colors.black),
+//                   borderRadius: BorderRadius.circular(8),
+//                   color: Colors.white
+//                 ),
+//                 child: Column(children: [
+
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Name",
+//                         hintStyle: TextStyle(
+
+//                         ),
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: TextField(decoration: const InputDecoration(
+//                       hintText: "Phone Number",
+//                       border: OutlineInputBorder(),
+//                       suffixIcon: Icon(Icons.add)
+//                     ),
+                    
+//                     keyboardType: TextInputType.number,
+//                     inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+
+                    
+//                     ),
+//                   ),
+//                   // TextField(
+//                   //    decoration: const InputDecoration(
+//                   //     hintText: "Phone Number 2",
+                
+//                   //   ),
+//                   //   keyboardType: TextInputType.number,
+//                   // inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+//                   // ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                        decoration: InputDecoration(
+//                         hintText: "Acquistion Date",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+                  
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: TextField(
+//                        decoration: const InputDecoration(
+//                         hintText: "Aadhar Card Number",
+//                         border: OutlineInputBorder()
+                        
+                                    
+//                       ),
+//                       keyboardType: TextInputType.number,
+//                     inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                        decoration: InputDecoration(
+//                         hintText: "PAN Card Number",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                          border: OutlineInputBorder(),
+//                          hintText: "Vehicle Number"
+//                       ),
+                     
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Vehicle Type",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Chesi Number",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "RC Number",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                    Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Modal Name",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Expiary Date",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     child: const TextField(
+//                       decoration: InputDecoration(
+//                         hintText: "Modal",
+//                         border: OutlineInputBorder()
+                                    
+//                       ),
+//                     ),
+//                   ),
+                  
+                  
+//                 ]),
+//               ),
+              
+//              Padding(
+//                padding: const EdgeInsets.only(bottom:8.0,top:8.0),
+//                child: SizedBox(
+                
+//                  child: ElevatedButton(onPressed: (){}, child: const Text("Confrim",style: TextStyle(color: Colors.white),),
+//                  style: ElevatedButton.styleFrom(
+//                   backgroundColor: Colors.brown,
+//                   foregroundColor: Colors.white,
+//                   shape: RoundedRectangleBorder(
+//                   borderRadius: BorderRadius.only(
+//                       bottomRight: Radius.circular(0),
+//                       bottomLeft: Radius.circular(0)))
+//                  ),
+//                  ),
+//                ),
+//              )
+//             ]),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+Wool Tracking
+
+// import 'package:flutter/material.dart';
+// import 'package:woolvoyage/components/tracker.dart';
+
+// class WoolTracker extends StatefulWidget {
+//    const WoolTracker({super.key});
+
+//   @override
+//   State<WoolTracker> createState() => _WoolTrackerState();
+// }
+
+// class _WoolTrackerState extends State<WoolTracker> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text("WoolTracking"),
+//         centerTitle: true,
+//         backgroundColor:Colors.lightBlue,
+//       ),
+//       body: SizedBox(
+//         child: Padding(
+//           padding:  const EdgeInsets.symmetric(horizontal: 0),
+//           child:ListView(
+//             scrollDirection: Axis.horizontal,
+//             children: const [
+//               MyTimeTile(isFirst: true, isLast: false, isPast: true,city:"Jaipur",),
+//               MyTimeTile(isFirst: false, isLast: false, isPast: true,city:"Bhopal"),
+//               MyTimeTile(isFirst: false, isLast: false, isPast: true,city:"Srinagar"),
+//               MyTimeTile(isFirst: false, isLast: false, isPast: false,city:"Hydreabad"),
+//               MyTimeTile(isFirst:false, isLast: true, isPast: false,city: "Karnataka",)
+//              ]  ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+Wool DataTable
+
+// Widget _buildSearchResult() {
+    
+   
+//       return SingleChildScrollView(
+//         scrollDirection: Axis.horizontal,
+//         child: DataTable(
+//           columns: const [
+//             DataColumn(label: Text('City')),
+//             DataColumn(label: Text('Werehous')),
+//             DataColumn(label: Text('Arrived at')), // Add additional columns as needed
+//             DataColumn(label: Text('Left at')),
+//           ],
+//           rows: .map((data) {
+//             return DataRow(cells: [
+//               DataCell(Text(data.city)),
+//               DataCell(Text(data.Warehouse_no)),
+//               const DataCell(Text('Price')), // Replace 'Price' with the actual value
+//               const DataCell(Text('Zone')), // Replace 'Zone' with the actual value
+//               DataCell(Text(data.grading)),
+//               DataCell(Text(data.color)),
+//               DataCell(Text(data.breed)),
+//             ]);
+//           }).toList(),
+//         ),
+//       );
+// }
+
+
+// class WoolInfo {
+//   final String city;
+//   final String Warehouse_no;
+//   final String breed;
+//   final String color;
+//   final String grading;
+//   final String fiberFitness;
+
+//   WoolInfo(
+//     this.city,
+//     this.Warehouse_no,
+//     this.breed,
+//     this.color,
+//     this.grading,
+//     this.fiberFitness,);
+// }
